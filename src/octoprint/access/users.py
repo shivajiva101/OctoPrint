@@ -21,7 +21,7 @@ from octoprint.util import get_fully_qualified_classname as fqcn
 from octoprint.util import to_bytes, yaml
 
 password_hashers = []
-/*
+
 try:
     from passlib.hash import argon2
 
@@ -34,7 +34,7 @@ except Exception:
     logging.getLogger(__name__).warning(
         "Argon2 passlib backend is not available, not using it for password hashing"
     )
-*/
+
 password_hashers.append(pbkdf2_sha256)
 
 class UserManager(GroupChangeListener):
